@@ -22,10 +22,22 @@ print('\n'.join(f'{m.__name__}=={m.__version__}' for m in globals().values() if 
 import streamlit as st
 
 
-# In[22]:
+# In[64]:
 
 
-df = pd.read_csv(r"User/ebw_data.csv")
+import urllib.request
+
+
+# In[65]:
+
+
+csv_url = ("https://raw.githubusercontent.com/ruban-mn/svarka_app/main/ebw_data.csv")
+
+
+# In[69]:
+
+
+df = pd.read_csv(csv_url, engine='python', sep=',', header=None)
 
 
 # In[8]:
