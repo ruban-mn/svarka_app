@@ -6,7 +6,6 @@
 
 import pandas as pd
 import numpy as np
-import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
 
@@ -23,10 +22,10 @@ print('\n'.join(f'{m.__name__}=={m.__version__}' for m in globals().values() if 
 import streamlit as st
 
 
-# In[7]:
+# In[22]:
 
 
-df = pd.read_csv("C:\mgtu\ebw_data.csv")
+df = pd.read_csv(r"C:\mgtu\ebw_data.csv")
 
 
 # In[8]:
