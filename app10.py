@@ -25,7 +25,7 @@ import streamlit as st
 # In[22]:
 
 
-df = pd.read_csv(r"C:\mgtu\ebw_data.csv")
+df = pd.read_csv(r"User/ebw_data.csv")
 
 
 # In[8]:
