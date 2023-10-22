@@ -40,18 +40,6 @@ csv_url = ("https://raw.githubusercontent.com/ruban-mn/svarka_app/main/ebw_data.
 df = pd.read_csv(csv_url, sep=',')
 
 
-# In[84]:
-
-
-df.head()
-
-
-# In[86]:
-
-
-df.columns
-
-
 # In[8]:
 
 
