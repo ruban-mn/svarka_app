@@ -22,22 +22,34 @@ print('\n'.join(f'{m.__name__}=={m.__version__}' for m in globals().values() if 
 import streamlit as st
 
 
-# In[64]:
+# In[74]:
 
 
 import urllib.request
 
 
-# In[65]:
+# In[82]:
 
 
 csv_url = ("https://raw.githubusercontent.com/ruban-mn/svarka_app/main/ebw_data.csv")
 
 
-# In[69]:
+# In[83]:
 
 
-df = pd.read_csv(csv_url, engine='python', sep=',', header=None)
+df = pd.read_csv(csv_url, sep=',')
+
+
+# In[84]:
+
+
+df.head()
+
+
+# In[86]:
+
+
+df.columns
 
 
 # In[8]:
@@ -68,14 +80,14 @@ def user_input_param():
 df_one = user_input_param()
 
 
-# In[11]:
+# In[87]:
 
 
 X = df.drop(["Width", "Depth"], axis=1)
 y = df[["Width", "Depth"]].copy()
 
 
-# In[12]:
+# In[88]:
 
 
 X1_train, X1_test, y1_train, y1_test = train_test_split(X, y,
